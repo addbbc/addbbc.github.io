@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>西安工程大学新媒体艺术学院毕业设计展示</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#882222', // 偏沉稳红，贴合院校艺术展气质
+            dark: '#1f1f1f',
+            light: '#f7f5f2',
+          },
+          fontFamily: {
+            sans: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-shadow {
+        text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      }
+      .card-hover {
+        transition: all 0.35s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 36px rgba(0,0,0,0.12);
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f7f5f2;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+  <!-- 顶部横幅 -->
+  <header class="relative h-[50vh] md:h-[60vh] bg-primary overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/40 z-0"></div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="text-[clamp(1.8rem,5vw,3.5rem)] font-bold text-white text-shadow mb-4">
+        西安工程大学
+      </h1>
+      <h2 class="text-[clamp(1.2rem,3vw,2rem)] text-white text-shadow">
+        新媒体艺术学院 · 毕业设计展示
+      </h2>
+      <p class="text-white/80 mt-4 text-base md:text-lg">New Media Art · Graduation Exhibition</p>
+      <a href="#works" class="inline-block mt-8 border border-white px-6 py-3 text-white rounded-full hover:bg-white hover:text-primary transition-all">
+        浏览作品 <i class="fa fa-arrow-down ml-1"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 导航 -->
+  <nav class="sticky top-0 bg-white/90 backdrop-blur shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="font-semibold text-primary">毕设作品展</span>
+      <div class="hidden md:flex gap-8">
+        <a href="#home" class="hover:text-primary transition">首页</a>
+        <a href="#works" class="hover:text-primary transition">作品</a>
+        <a href="#about" class="hover:text-primary transition">展览介绍</a>
+        <a href="#contact" class="hover:text-primary transition">信息</a>
+      </div>
+      <button class="md:hidden text-xl"><i class="fa fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- 作品区域 -->
+  <section id="works" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-14">
+      <h3 class="text-3xl font-bold mb-3">参展作品 Works</h3>
+      <div class="w-16 h-1 bg-primary mx-auto"></div>
+    </div>
+
+    <!-- 作品网格 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 作品卡片 1（你可以复制多份增加作品） -->
+      <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+        <div class="aspect-[16/10] bg-slate-200 flex items-center justify-center text-slate-400">
+          <i class="fa fa-picture-o text-5xl"></i>
+          <!-- 替换：<img src="作品图片链接" class="w-full h-full object-cover"> -->
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">作品名称</h4>
+          <p class="text-sm text-slate-600 mb-3">作者：XXX | 方向：定格动画 / 交互艺术 / 数字影像</p>
+          <p class="text-slate-700 text-sm line-clamp-3">作品简介：填写你的毕设介绍，创作理念、主题、技术手段等。</p>
+        </div>
+      </div>
+
+      <!-- 作品卡片2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+        <div class="aspect-[16/10] bg-slate-200 flex items-center justify-center text-slate-400">
+          <i class="fa fa-picture-o text-5xl"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">作品名称</h4>
+          <p class="text-sm text-slate-600 mb-3">作者：XXX | 方向：新媒体影像</p>
+          <p class="text-slate-700 text-sm line-clamp-3">作品简介：填写你的毕设介绍，创作理念、主题、技术手段等。</p>
+        </div>
+      </div>
+
+      <!-- 作品卡片3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow card-hover">
+        <div class="aspect-[16/10] bg-slate-200 flex items-center justify-center text-slate-400">
+          <i class="fa fa-picture-o text-5xl"></i>
+        </div>
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">作品名称</h4>
+          <p class="text-sm text-slate-600 mb-3">作者：XXX | 方向：数字插画</p>
+          <p class="text-slate-700 text-sm line-clamp-3">作品简介：填写你的毕设介绍，创作理念、主题、技术手段等。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 展览介绍 -->
+  <section id="about" class="bg-dark text-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6 text-center">展览介绍 About</h3>
+      <p class="leading-relaxed text-lg opacity-90">
+        西安工程大学新媒体艺术学院毕业设计展，汇集数字影像、定格动画、交互装置、数字绘画、动态视觉等方向本科毕业设计作品。
+        本次展览聚焦新媒体语境下艺术表达，融合传统美学与数字技术，展现毕业生的艺术思考与实践创作成果。
+      </p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer id="contact" class="bg-black text-white py-10 text-center">
+    <p>西安工程大学 新媒体艺术学院</p>
+    <p class="text-sm opacity-60 mt-2">©2026 毕业设计线上展览 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
